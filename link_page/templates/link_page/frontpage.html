@@ -1,43 +1,27 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    {% load static %}
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>リンク集</title>
-    <link rel="stylesheet" href="{% static 'css/base.css'%}" />
-  </head>
-  <body>
-    <h1 class="title">SHIMAリンク集</h1>
-    <p>---------------------------</p>
+{% extends 'link_page/base.html' %} {% block content %}
+  {% load static %}
+  <dev class="linkWrapper">
+    <dev class="header">
+      <h1>SHIMAリンク集</h1>
+    </dev>
     <a href="#idou"><h2>住所はこちら</h2></a>
-    <p>---------------------------</p>
     <h2>
       SHIMAの開発物は<font color="#ff1493">
-        <b><a href="https://masaki-shima.github.io/link_page/" target="_blank">こちら</a></b>
+        <b><a href="https://github.com/masaki-shima/link_page" target="_blank">こちら</a></b>
       </font>
     </h2>
-    <p>---------------------------</p>
-    <h2>好きな画像</h2>
-    <img src="{% static 'img/0000.png'%}" alt="windows画面" width="320px" />
-    <p>---------------------------</p>
+    <img src="{% static 'img/0000.png' %}" alt="windows画面" width="320" />
     <ul>
       <li>list1</li>
       <li>list2</li>
       <li>list3</li>
       <li>list4</li>
     </ul>
-
     <ol>
       <li>list1</li>
       <li>list2</li>
       <li>list3</li>
       <li>list4</li>
     </ol>
-    <p>---------------------------</p>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <p>---------------------------</p>
-    <h2 id="idou">住所</h2>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-  </body>
-</html>
+  </dev>
+{% endblock %}

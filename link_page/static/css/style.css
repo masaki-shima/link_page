@@ -1,0 +1,15 @@
+body {
+    background-color: #daedf9;
+    padding-top: 55px;
+}
+
+.header {
+    color: red;
+    text-align: center;
+}
+
+.linkWrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+}
