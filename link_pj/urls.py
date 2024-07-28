@@ -1,8 +1,7 @@
 from django.contrib import admin
-from django.urls import path
-from link_page.views import frontpage
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", frontpage)
+    path("", include("link_page.urls"))
 ]

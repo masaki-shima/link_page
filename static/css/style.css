@@ -1,0 +1,23 @@
+body {
+    background-color: #daedf9;
+    padding-top: 55px;
+}
+
+.content {
+    max-width: 530px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0px 0px 90px 31px #ffffff;
+    border-radius: 10px;
+}
+
+.header {
+    color: red;
+    text-align: center;
+}
+
+.linkWrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+}
