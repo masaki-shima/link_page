@@ -1,10 +1,11 @@
-from pathlib import Path
-
 ###デプロイ用
 import os
+from pathlib import Path
+
 import environ
 from decouple import config
 from dj_database_url import parse as dburl
+
 ###
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -18,7 +19,7 @@ SECRET_KEY = 'django-insecure-*ca#-%9r-(z3(jtt8^x31xe!tdeiy^p0!_!*ns&=*6*8(q(%)s
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'linkpage.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
