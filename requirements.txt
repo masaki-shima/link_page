@@ -1,0 +1,10 @@
+django==5.0.7
+
+# deploy to render
+dj-database-url
+dj-static
+python-decouple
+django-environ
+gunicorn
+psycopg2-binary
+whitenoise
