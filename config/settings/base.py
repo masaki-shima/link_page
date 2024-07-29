@@ -8,7 +8,7 @@ from dj_database_url import parse as dburl
 
 ###
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 ###デプロイ用
 env = environ.Env()
@@ -16,10 +16,6 @@ env.read_env(os.path.join(BASE_DIR, ".env"))
 ###
 
 SECRET_KEY = 'django-insecure-*ca#-%9r-(z3(jtt8^x31xe!tdeiy^p0!_!*ns&=*6*8(q(%)s'
-
-DEBUG = True
-
-ALLOWED_HOSTS = ['127.0.0.1', 'linkpage.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -42,7 +38,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'link_pj.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
@@ -60,7 +56,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'link_pj.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 default_dburl = "sqlite:///" + str(BASE_DIR / "db.sqlite3") #デプロイ用
 
