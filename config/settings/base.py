@@ -114,7 +114,5 @@ SUPERUSER_PASSWORD = env("SUPERUSER_PASSWORD")
 ###
 
 # 辞書型でyamlファイル読み込み
-with open(os.path.join(BASE_DIR, "parameter.yaml"),"r", encoding ="utf8") as param:
-    param_yaml: dict = safe_load(param)
-    app_name: str = param_yaml["app"]["name"]
-    print(app_name)
+with open(os.path.join(BASE_DIR, "info.yml"),"r", encoding ="utf8") as file:
+    INFO: dict = safe_load(file)
