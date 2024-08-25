@@ -49,9 +49,8 @@
   {% comment %} コメント募集 {% endcomment %}
   <hr>
   <h2><a href="{% url 'link_page:page_create' %}">コメントする</a></h2>
-  <br>
   <a href="{% url 'link_page:comment_list' %}">コメント一覧</a>
-  <br>
+  <br><br>
   <a href="{% url 'link_page:dropdown00' %}">ドロップダウンメニュー</a>
   <br>
   <a href="{% url 'link_page:dropdown01' %}">ドロップダウンメニュー2</a>
@@ -59,7 +58,7 @@
   <a href="{% url 'link_page:jquery' %}">jQueryドロップダウンメニュー</a>
   <br>
   <a href="{% url 'link_page:test' %}">テストページ</a>
-  <br>
+  <br><br>
   <form action="{% url 'accounts:logout' %}" method="post">
     {% csrf_token %}
     <button type="submit">ログアウト</button>
