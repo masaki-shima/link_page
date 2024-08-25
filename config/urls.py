@@ -5,6 +5,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    # トップページは指定なしにしないとデプロイ失敗する
     path("", include("link_page.urls")), 
     path("accounts/", include("accounts.urls")),
     path("", include("django.contrib.auth.urls")), 
