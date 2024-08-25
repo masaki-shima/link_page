@@ -31,3 +31,7 @@ body {
     text-decoration: none;
     color: rgb(10, 79, 254);
 }
+
+.picture {
+    max-width: 800px;
+}

@@ -5,7 +5,7 @@
 <div>{{ comment.page_date }}</div>
 <div>{{ comment.body | linebreaksbr }}</div>
 {% if comment.picture %}
-  <img src="{{ comment.picture.url }}"/>
+  <img src="{{ comment.picture.url }}" class="picture"/>
 {% endif %}
 <br>
 <a href="{% url 'link_page:comment_update' comment.id %}">編集</a>
