@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "link_page.apps.LinkPageConfig",
-    "accounts.apps.AccountsConfig",
 ]
 
 MIDDLEWARE = [
