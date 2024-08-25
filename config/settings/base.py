@@ -122,6 +122,6 @@ MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
 
 # ログイン後はトップページへ
-LOGIN_REDIRECT_URL = "/linkpage/"
+LOGIN_REDIRECT_URL = "/"
 # ログアウト後はログイン画面へ
 LOGOUT_REDIRECT_URL = "/login/"
