@@ -1,0 +1,70 @@
+{% extends 'link_page/base.html' %} {% block content %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/dropdown02.css' %}" />
+
+<div class="linkWrapper">
+  {% if request.user.is_authenticated %}
+  <p>{{ request.user }}さん、こんにちは！</p>
+  {% endif %}
+  <div id="clock"></div>
+  {% comment %} <p>{{ datetime_now }}</p> {% endcomment %}
+
+{% comment %} ドロップダウンメニュー01 {% endcomment %}
+  <div class="dropdownbase2">
+    <div class="dropdown">
+      <div class="select">
+        <span class="selected">Figma</span>
+        <div class="caret"></div>
+      </div>
+      <ul class="menu">
+        <li>Framer</li>
+        <li>Sketch</li>
+        <li>Invision Studio</li>
+        <li class="active">Figma</li>
+        <li>Adobe XD</li>
+        <li>Inkscape</li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <div class="select">
+        <span class="selected">Facebook</span>
+        <div class="caret"></div>
+      </div>
+      <ul class="menu">
+        <li class="active">Facebook</li>
+        <li>Instagram</li>
+        <li>Twitter</li>
+        <li>Linkedin</li>
+        <li>Tik Tok</li>
+        <li>SnapChat</li>
+        <li>Whatsapp</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="{% static 'js/dropdown01.js' %}"></script>
+
+
+<br>
+  {% comment %} コメント募集 {% endcomment %}
+  <hr>
+  <h2><a href="{% url 'link_page:page_create' %}">コメントする</a></h2>
+  <br>
+  <a href="{% url 'link_page:comment_list' %}">コメント一覧</a>
+  <br>
+  <a href="{% url 'link_page:dropdown00' %}">ドロップダウンメニュー</a>
+  <br>
+  <a href="{% url 'link_page:dropdown01' %}">ドロップダウンメニュー2</a>
+  <br>
+  <a href="{% url 'link_page:jquery' %}">jQueryドロップダウンメニュー</a>
+  <br>
+  <a href="{% url 'link_page:test' %}">テストページ</a>
+  <br>
+  <form action="{% url 'accounts:logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">ログアウト</button>
+  </form>
+</div>
+
+{% endblock %}

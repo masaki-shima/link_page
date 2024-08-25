@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "link_page",
+    "link_page.apps.LinkPageConfig",
 ]
 
 MIDDLEWARE = [
@@ -116,3 +116,12 @@ SUPERUSER_PASSWORD = env("SUPERUSER_PASSWORD")
 # 辞書型でyamlファイル読み込み
 with open(os.path.join(BASE_DIR, "info.yml"),"r", encoding ="utf8") as file:
     INFO: dict = safe_load(file)
+    
+# 画像を登録
+MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = "/media/"
+
+# ログイン後はトップページへ
+LOGIN_REDIRECT_URL = "/linkpage/"
+# ログアウト後はログイン画面へ
+LOGOUT_REDIRECT_URL = "/login/"

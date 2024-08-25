@@ -1,0 +1,15 @@
+{% extends 'link_page/base.html' %} {% block content %}
+  {% load static %}
+
+<h2>{{ comment.title }}</h2>
+<div>{{ comment.page_date }}</div>
+<div>{{ comment.body | linebreaksbr }}</div>
+{% if comment.picture %}
+  <img src="{{ comment.picture.url }}"/>
+{% endif %}
+<br>
+<a href="{% url 'link_page:comment_update' comment.id %}">編集</a>
+<a href="{% url 'link_page:comment_delete' comment.id %}">削除</a>
+<a href="{% url 'link_page:comment_list' %}">戻る</a>
+
+{% endblock %}

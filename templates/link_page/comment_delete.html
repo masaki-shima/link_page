@@ -1,0 +1,17 @@
+{% extends 'link_page/base.html' %} {% block content %}
+  {% load static %}
+
+<form method="POST">
+  {% csrf_token %}
+  <p>このページを削除して良いですか ?</p>
+  <button type="submit">削除</button>
+</form>
+<h2>{{ comment.title }}</h2>
+<div>{{ comment.page_date }}</div>
+<div>{{ comment.body | linebreaksbr }}</div>
+{% if comment.picture %}
+  <img src="{{ comment.picture.url }}"/>
+{% endif %}
+<br>
+
+{% endblock %}

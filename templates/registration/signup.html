@@ -1,0 +1,13 @@
+{% extends 'link_page/base.html' %} {% block content %}
+  {% load static %}
+
+<h2>新規登録</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">新規登録</button>
+</form>
+
+<p>既にアカウントを持っていますか？</p>
+<a href="{% url 'accounts:login' %}">ログイン</a>
+{% endblock %}

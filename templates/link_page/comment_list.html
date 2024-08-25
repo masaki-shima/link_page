@@ -1,0 +1,15 @@
+{% extends 'link_page/base.html' %} {% block content %}
+  {% load static %}
+
+<ul>
+  {% for comment in comment_list %}
+    <li>{{ comment.page_date }}:
+      <a href="{% url 'link_page:comment_detail' comment.id %}">{{comment.title}}</a>
+    </li>
+
+  {% empty %}
+    <div>コメントがありません</div>
+  {% endfor %}
+</ul>
+
+{% endblock %}

@@ -5,14 +5,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>リンク集</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>リンク集</title>
   </head>
   <body>
-    <dev class="linkWrapper">
+    <div class="linkWrapper">
+      <div class="header">
+        <h1><a href="{% url 'link_page:index' %}">SHIMAリンク集</a></h1>
+      </div>
       {% block content %}
-
       {% endblock %}
-    </dev>
+      <script src="{% static 'js/time.js' %}"></script>
+    </div>
   </body>
 </html>

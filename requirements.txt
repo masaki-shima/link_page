@@ -1,6 +1,9 @@
 django==5.0.7
 PyYAML==6.0.1
 
+# Djangoで画像登録
+pillow==10.4.0
+
 # deploy to render
 dj-database-url
 dj-static
