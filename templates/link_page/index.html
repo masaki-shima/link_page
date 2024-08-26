@@ -4,7 +4,7 @@
 
 <div class="linkWrapper">
   {% if request.user.is_authenticated %}
-  <p>{{ request.user }}さん、こんにちは！</p>
+  <h4><p>{{ request.user }}さん、こんにちは！</p></h4> 
   {% endif %}
   <div id="countdown"></div>
   {% comment %} <p>{{ datetime_now }}</p> {% endcomment %}
@@ -13,14 +13,14 @@
   <div class="dropdownbase2">
     <div class="dropdown">
       <div class="select">
-        <span class="selected">Figma</span>
+        <span class="selected">TEST_url</span>
         <div class="caret"></div>
       </div>
       <ul class="menu">
-        <li>Framer</li>
-        <li>Sketch</li>
-        <li>Invision Studio</li>
-        <li class="active">Figma</li>
+        <li class="active">Framer</li>
+        <li class="active">Sketch</li>
+        <li class="active">Invision Studio</li>
+        <li>Figma</li>
         <li>Adobe XD</li>
         <li>Inkscape</li>
       </ul>
@@ -28,17 +28,17 @@
 
     <div class="dropdown">
       <div class="select">
-        <span class="selected">Facebook</span>
+        <span>Video production</span>
         <div class="caret"></div>
       </div>
       <ul class="menu">
-        <li class="active">Facebook</li>
-        <li>Instagram</li>
-        <li>Twitter</li>
+        <li class="active"><a href="https://www.youtube.com/@shima_jxdg/" target="_blank">YouTube</a></li>
+        <li class="active"><a href="https://www.instagram.com/masaki_dg/" target="_blank">Instagram</a></li>
+        <li class="active"><a href="https://x.com/shimanuki_m" target="_blank">X (Twitter)</a></li>
         <li>Linkedin</li>
         <li>Tik Tok</li>
         <li>SnapChat</li>
-        <li>Whatsapp</li>
+        <li>Facebook</li>
       </ul>
     </div>
   </div>
@@ -46,20 +46,31 @@
   <script src="{% static 'js/dropdown01.js' %}"></script>
 
 
-<br>
+  <br>
   {% comment %} コメント募集 {% endcomment %}
   <hr>
-  <h2><a href="{% url 'link_page:page_create' %}">コメントする</a></h2>
+  <h2 class="place">
+    <a href="{% url 'link_page:page_create' %}">コメントする</a>
+  {% comment %} jQueryのプルダウンメニュー {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/jquery01.css' %}" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <div id="category">
+      <ul id="menu">
+      <li><div class="main_menu">testpage</div>
+        <ul class="sub_menu">
+          <li><a href="{% url 'link_page:dropdown00' %}">ドロップダウンメニュー</a></li>
+          <li><a href="{% url 'link_page:dropdown01' %}">ドロップダウンメニュー2</a></li>
+          <li><a href="{% url 'link_page:jquery' %}">jQueryドロップダウンメニュー</a></li>
+          <li><a href="{% url 'link_page:test' %}">テストページ</a></li>
+        </ul>
+      </li>
+    </div>
+    <script src="{% static 'js/jquery.js' %}"></script>
+  </h2>
   <a href="{% url 'link_page:comment_list' %}">コメント一覧</a>
-  <br><br>
-  <a href="{% url 'link_page:dropdown00' %}">ドロップダウンメニュー</a>
-  <br>
-  <a href="{% url 'link_page:dropdown01' %}">ドロップダウンメニュー2</a>
-  <br>
-  <a href="{% url 'link_page:jquery' %}">jQueryドロップダウンメニュー</a>
-  <br>
-  <a href="{% url 'link_page:test' %}">テストページ</a>
-  <br><br>
+  <br><br><br>
+
+
   <form action="{% url 'accounts:logout' %}" method="post">
     {% csrf_token %}
     <button type="submit">ログアウト</button>

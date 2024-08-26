@@ -2,18 +2,22 @@
 .dropdownbase2 {
     padding: 2.5em;
     font-family: Helvetica, sans-serif;
-    min-height: 50vh;
+    /* ドロップダウン背景のサイズを調整 */
+    min-height: 25vh;
     background: #0e0e0e;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    flex-direction: column;
+    /* メニューを縦並びにする */
+    /* flex-direction: column; */
 }
 
 .dropdown {
     min-width: 15em;
     position: relative;
+    /* メニュー毎の距離を調整 */
+    margin: 2em; 
 }
     
 .dropdown * {
@@ -34,7 +38,7 @@
 }
 
 .select-clicked {
-border: 1px #269a3d solid;
+border: 1px #266e9a solid;
 box-shadow: 0 0 0.8em #269a26;
 }
 
@@ -95,7 +99,12 @@ background: #373737;
 }
 
 .menu li:hover {
-    background: #242424;
+    background: #000000;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
 }
 
 .active {

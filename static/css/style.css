@@ -25,11 +25,12 @@ body {
     padding: 10px 0;
     background: rgb(245,253,255);
     background: radial-gradient(circle, rgba(245,253,255,1) 0%, rgba(161,242,255,1) 59%, rgba(48,174,255,1) 100%);
+    border-radius: 10px 10px 0 0;
 }
 
-.header_a {
+.header a {
     text-decoration: none;
-    color: rgb(10, 79, 254);
+    color: rgb(32, 32, 32);
 }
 
 .picture {
