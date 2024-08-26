@@ -45,7 +45,7 @@
 }
 
 .toggle {
-    background: url("./images/menu.png");
+    background: url("../../img/move_site/menu.png");
     width: 60px;
     height: 60px;
     background-size: 30px;
@@ -56,7 +56,7 @@
 
 
 .toggle.active {
-    background: url("./images/close.png");
+    background: url("../../img/move_site/close.png");
     width: 60px;
     height: 60px;
     background-size: 30px;
