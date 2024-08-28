@@ -26,6 +26,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "link_page.apps.LinkPageConfig",
+    "blog.apps.BlogConfig",
+    "todo_list.apps.TodoListConfig",
+    #ここに新規作成したアプリがないとdbを作成できない
 ]
 
 MIDDLEWARE = [
@@ -121,7 +124,7 @@ with open(os.path.join(BASE_DIR, "info.yml"),"r", encoding ="utf8") as file:
 MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
 
-# ログイン後はトップページへ
+# ログイン後はトップページへ（リンクページ用）
 LOGIN_REDIRECT_URL = "/linkpage/"
-# ログアウト後はログイン画面へ
+# ログアウト後はログイン画面へ（リンクページ用）
 LOGOUT_REDIRECT_URL = "/login/"

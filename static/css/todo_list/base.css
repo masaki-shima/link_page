@@ -1,0 +1,149 @@
+body {
+    background-color: #daedf9;
+    padding-top: 55px;
+}
+
+.todoAppWrapper {
+    max-width: 530px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0px 0px 90px 31px #ffffff;
+    border-radius: 10px;
+}
+
+a {
+    color: #595959;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background: rgb(2,0,36);
+    background: rgb(243,245,246);
+    background: rgb(245,253,255);
+    background: radial-gradient(circle, rgba(245,253,255,1) 0%, rgba(161,242,255,1) 59%, rgba(48,174,255,1) 100%);
+    border-radius: 10px 10px 0 0;
+    color: rgb(48, 48, 48);
+}
+
+.taskWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.443)
+}
+
+.taskTitle {
+    display: flex;
+    align-items: center;
+}
+
+.taskCompletedIcon {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(123, 130, 123);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.taskInCompletedIcon {
+    height: 20px;
+    width: 20px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logoinAndLogout {
+    padding: 20px;
+}
+
+.logoinAndLogout a {
+    color: lightcoral;
+}
+
+.editButton {
+    color: green;
+    font-size: 30px;
+    position:relative;
+    top: 3px;
+}
+
+.deleteButton {
+    color: red;
+    font-size: 30px;
+    padding: 15px;
+}
+
+/* タスク検索と追加のフォーム */
+.searchWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.searchInput {
+    height: 24px;
+    outline: none;
+    border: 1px solid lightseagreen;
+    border-radius: 5px;
+    padding: 2px 4px;
+    width: 160px !important;
+}
+
+.searchButton {
+    border: 1px solid lightseagreen;
+    padding: 4px 10px;
+    background-color: #fafafa;
+    color: lightseagreen;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.4s;
+}
+
+.searchButton:hover {
+    background-color: lightseagreen;
+    color: white;
+}
+
+.addButton {
+    font-size: 32px;
+    color: lightseagreen;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+}
+
+.deleteButton2 {
+    border: 1px solid rgb(22, 13, 11);
+    padding: 4px 10px;
+    background-color: #e0e0e0;
+    color: rgb(251, 6, 6);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.4s;
+}
+
+.deleteButton2:hover {
+    background-color: rgb(218, 1, 1);
+    color: white;
+}
+
+.accountWrapper {
+    padding: 5px 20px 20px 20px;
+}

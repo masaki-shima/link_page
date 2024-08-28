@@ -1,0 +1,13 @@
+{% extends 'todo_list/base.html' %}
+{% block content %}
+
+<div class="header">
+    <h1>{{task}}</h1>
+</div>
+
+<h2>詳細：{{task.description}}</h2>
+
+<a href="{% url 'todo_list:tasks' %}">戻る</a>
+
+{% endblock content %}
+

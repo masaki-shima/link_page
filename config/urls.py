@@ -9,5 +9,9 @@ urlpatterns = [
     path("", include("move_site.urls")), 
     path("linkpage/", include("link_page.urls")), 
     path("accounts/", include("accounts.urls")),
+    path("blog/", include("blog.urls")),
+    path("todolist/", include("todo_list.urls")),
     path("", include("django.contrib.auth.urls")), 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+

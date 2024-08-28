@@ -1,5 +1,5 @@
 body {
-    background-color: #daedf9;
+    background-color: #bababa;
     padding-top: 55px;
 }
 
@@ -23,14 +23,13 @@ body {
 .header {
     text-align: center;
     padding: 10px 0;
-    background: rgb(245,253,255);
-    background: radial-gradient(circle, rgba(245,253,255,1) 0%, rgba(161,242,255,1) 59%, rgba(48,174,255,1) 100%);
+    background: rgb(33, 33, 33);
     border-radius: 10px 10px 0 0;
 }
 
 .header a {
     text-decoration: none;
-    color: rgb(32, 32, 32);
+    color: rgb(255, 255, 255);
 }
 
 .picture {
