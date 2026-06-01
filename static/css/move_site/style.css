@@ -52,8 +52,32 @@
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+ 
+/*ーーーー↓追加↓ーーーー*/
+    animation: pulse 2s infinite;
+    position: relative;
 }
 
+.toggle::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border: 10px solid rgba(255,255,255,0.4);
+    border-radius: 50%;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/*ーーーーーーーーーーーーーー*/
 
 .toggle.active {
     background: url("../../img/move_site/close.png");
@@ -112,6 +136,11 @@
     height: 100%;
     background-color:#03a9f4;
     mix-blend-mode: overlay;
+
+/* ブラー追加 */
+    inset: 0;
+    background: rgba(3, 169, 244, 0.3);
+    backdrop-filter: blur(8px);
 }
 
 .text {
