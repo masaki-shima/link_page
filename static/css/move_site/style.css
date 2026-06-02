@@ -77,7 +77,7 @@
         transform: scale(1);
     }
 }
-/*ーーーーーーーーーーーーーー*/
+/*ーーーーここまでーーーー*/
 
 .toggle.active {
     background: url("../../img/move_site/close.png");
