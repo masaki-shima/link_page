@@ -159,7 +159,7 @@
 .text h3 {
     font-size: 4em;
     font-weight: 700;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: #fff;
     line-height: 1em;
 }
